@@ -1,5 +1,9 @@
 Revision history for Perl extension Text::HikiDoc.
 
+1.018 Mon Mar 19 21:07:00 2007
+	- remove Build.PL and add Makefile.PL
+    - fixed inavlid POD
+
 1.017 Wed Feb 17 14:14:00 2007
 	- refactor texthighlight.pm and vimcolor.pm
     - fixed version_string in this file ( s/1.015/1.016/ )

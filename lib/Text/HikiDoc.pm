@@ -1,5 +1,5 @@
 #
-# $Id: HikiDoc.pm,v 1.17 2007/02/17 05:14:40 oneroad Exp $
+# $Id: HikiDoc.pm,v 1.18 2007/03/19 07:34:15 oneroad Exp $
 #
 package Text::HikiDoc;
 
@@ -8,7 +8,7 @@ use warnings;
 
 use File::Basename;
 
-our $VERSION = sprintf "%d.%03d", q$Revision: 1.17 $ =~ /(\d+)/g;
+our $VERSION = sprintf "%d.%03d", q$Revision: 1.18 $ =~ /(\d+)/g;
 
 sub _array_to_hash {
     my $self = shift;
@@ -937,7 +937,7 @@ Text::HikiDoc can be enhanced by the plug-in. When you use the plug-in, enable_p
 
 is replaced with 
 
-<br />
+E<lt>br /E<gt>
 
 =back
 
@@ -961,7 +961,7 @@ is replaced with
 
 is replaced with
 
-<ins>insert part</ins>
+E<lt>insE<gt>insert partE<lt>/insE<gt>
 
 =back
 
@@ -973,7 +973,7 @@ H{{sub('2')}}O
 
 is replaced with
 
-H<sub>2</sub>O
+HE<lt>subE<gt>2E<lt>/subE<gt>O
 
 =back
 
@@ -985,7 +985,7 @@ H<sub>2</sub>O
 
 is replaced with
 
-2<sup>3</sup>=8
+2E<lt>supE<gt>3E<lt>/supE<gt>=8
 
 =back
 
@@ -995,7 +995,7 @@ is replaced with
 
 Syntax color text is added to the pre mark. That uses Text::Highlight .
 
-The following, it is highlighted as the source code of Perl. When writing instead of"<<< Perl" as "<<<", it becomes a usual pre mark.
+The following, it is highlighted as the source code of Perl. When writing instead of"E<lt>E<lt>E<lt> Perl" as "E<lt>E<lt>E<lt>", it becomes a usual pre mark.
 
   <<< Perl
   sub dummy {
