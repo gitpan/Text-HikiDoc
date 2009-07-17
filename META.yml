@@ -1,6 +1,6 @@
 --- 
 abstract: Pure Perl implementation of 'HikiDoc' which is a text-to-HTML conversion tool.
-author: KAWABATA, Kazumichi (Higemaru) <oneroad@mac.com>
+author: KAWABATA, Kazumichi (Higemaru) <kawabata@cpan.org>
 build_requires: 
   Test::Base: 0
 distribution_type: module
@@ -17,4 +17,4 @@ no_index:
 requires: 
   File::Basename: 0
   perl: 5.6.0
-version: 1.018
+version: 1.019

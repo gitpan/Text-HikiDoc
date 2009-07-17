@@ -1,4 +1,4 @@
-# $Id: 31_lib-Text-HikiDoc-Plugin-br.t,v 1.3 2006/10/13 04:09:33 6-o Exp $
+# $Id: 31_lib-Text-HikiDoc-Plugin-br.t,v 1.4 2009/02/25 12:18:39 oneroad Exp $
 use Test::Base;
 use Text::HikiDoc;
 
@@ -56,3 +56,27 @@ hogehoge{{br}}fugafuga
 <p>hogehoge<br>fugafuga</p>
 --- outline
 {{br}} with empty_element_suffix
+
+===
+--- input
+a{{br(1,'clear:both;')}}b
+--- output
+<p>a<br style="clear:both;">b</p>
+--- outline
+{{br(1,'clear:both;')}}
+
+===
+--- input
+a{{br(3,'clear:both;')}}b
+--- output
+<p>a<br style="clear:both;"><br style="clear:both;"><br style="clear:both;">b</p>
+--- outline
+{{br(3,'clear:both;')}}
+
+===
+--- input
+a{{br 1,'clear:both;'}}b
+--- output
+<p>a<br style="clear:both;">b</p>
+--- outline
+{{br 1,'clear:both;'}}

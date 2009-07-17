@@ -1,6 +1,6 @@
 use inc::Module::Install;
 name 'Text-HikiDoc';
-author 'KAWABATA, Kazumichi (Higemaru) <oneroad@mac.com>';
+author 'KAWABATA, Kazumichi (Higemaru) <kawabata@cpan.org>';
 perl_version '5.006';
 all_from 'lib/Text/HikiDoc.pm';
 

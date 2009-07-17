@@ -1,5 +1,5 @@
 #
-# $Id: ins.pm,v 1.1 2006/10/10 08:00:20 6-o Exp $
+# $Id: ins.pm,v 1.2 2009/02/26 15:06:08 oneroad Exp $
 #
 package Text::HikiDoc::Plugin::ins;
 
@@ -7,7 +7,7 @@ use strict;
 use warnings;
 use base 'Text::HikiDoc::Plugin';
 
-our $VERSION = sprintf "%d.%03d", q$Revision: 1.1 $ =~ /(\d+)/g;
+our $VERSION = sprintf "%d.%03d", q$Revision: 1.2 $ =~ /(\d+)/g;
 
 sub to_html {
     my $self = shift;
@@ -17,3 +17,5 @@ sub to_html {
 
     return '<ins>'.$str.'</ins>';
 }
+
+1;

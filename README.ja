@@ -217,7 +217,7 @@ AUTHORS
     オリジナルの 'HikiDoc' はかずひこ氏 <kazuhiko@fdiary.net> によって
     作られました。
 
-    本ライブラリの本リリースは、川端 一道 (Higemaru) <oneroad@mac.com>
+    本ライブラリの本リリースは、川端 一道 (Higemaru) <kawabata@cpan.org>
     によって作られました。
     http://haro.jp/
 
@@ -225,5 +225,5 @@ COPYRIGHT AND LICENSE
     This library 'HikiDoc.pm' is free software; you can redistribute it
     and/or modify it under the same terms as Perl itself.
 
-    Copyright (C) 2006- Kawabata, Kazumichi (Higemaru) <oneroad@mac.com>
+    Copyright (C) 2006- Kawabata, Kazumichi (Higemaru) <kawabata@cpan.org>
 

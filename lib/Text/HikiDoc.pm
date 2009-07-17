@@ -1,5 +1,5 @@
 #
-# $Id: HikiDoc.pm,v 1.18 2007/03/19 07:34:15 oneroad Exp $
+# $Id: HikiDoc.pm,v 1.19 2009/07/17 12:59:59 oneroad Exp $
 #
 package Text::HikiDoc;
 
@@ -8,7 +8,7 @@ use warnings;
 
 use File::Basename;
 
-our $VERSION = sprintf "%d.%03d", q$Revision: 1.18 $ =~ /(\d+)/g;
+our $VERSION = sprintf "%d.%03d", q$Revision: 1.19 $ =~ /(\d+)/g;
 
 sub _array_to_hash {
     my $self = shift;
@@ -1059,12 +1059,12 @@ http://projects.netlab.jp/hikidoc/
 
 The original 'HikiDoc' was written by Kazuhiko E<lt>kazuhiko@fdiary.netE<gt>
 
-This release was made by Kawabata, Kazumichi (Higemaru) E<lt>oneroad@mac.comE<gt> http://haro.jp/
+This release was made by Kawabata, Kazumichi (Higemaru) E<lt>kawabata@cpan.orgE<gt> http://haro.jp/
 
 =head1 COPYRIGHT AND LICENSE
 
 This library 'HikiDoc.pm' is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 
-Copyright (C) 2006- Kawabata, Kazumichi (Higemaru) E<lt>oneroad@mac.comE<gt>
+Copyright (C) 2006- Kawabata, Kazumichi (Higemaru) E<lt>kawabata@cpan.orgE<gt>
 
 =cut

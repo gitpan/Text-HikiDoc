@@ -1,4 +1,4 @@
-# $Id: 36_lib-Text-HikiDoc-Plugin-vimcolor.t,v 1.3 2006/11/15 04:22:39 6-o Exp $
+# $Id: 36_lib-Text-HikiDoc-Plugin-vimcolor.t,v 1.5 2009/02/26 15:04:25 oneroad Exp $
 use Test::Base;
 use Text::HikiDoc;
 
@@ -86,7 +86,7 @@ sub dummy {
     <span class="synIdentifier">$a</span> =~ <span class="synStatement">s/</span><span class="synConstant">^</span><span class="synSpecial">\s*(.*)\s*</span><span class="synConstant">$</span><span class="synStatement">/</span><span class="synIdentifier">$1</span><span class="synStatement">/</span>;
 
     <span class="synStatement">if</span> ( <span class="synIdentifier">$a</span> =~<span class="synStatement"> /</span><span class="synSpecial">(</span><span class="synIdentifier">$PLUGIN_RE</span><span class="synSpecial">)</span><span class="synStatement">/</span> ) {
-        <span class="synIdentifier">&amp;amp</span>;hoge(<span class="synIdentifier">$a</span>);
+        <span class="synIdentifier">&amp;hoge</span>(<span class="synIdentifier">$a</span>);
     }
     <span class="synStatement">return</span> <span class="synIdentifier">$string</span>;
 }
@@ -122,7 +122,7 @@ sub dummy {
     <span class="synIdentifier">$a</span> =~ <span class="synStatement">s/</span><span class="synConstant">^</span><span class="synSpecial">\s*(.*)\s*</span><span class="synConstant">$</span><span class="synStatement">/</span><span class="synIdentifier">$1</span><span class="synStatement">/</span>;
 
     <span class="synStatement">if</span> ( <span class="synIdentifier">$a</span> =~<span class="synStatement"> /</span><span class="synSpecial">(</span><span class="synIdentifier">$PLUGIN_RE</span><span class="synSpecial">)</span><span class="synStatement">/</span> ) {
-        <span class="synIdentifier">&amp;amp</span>;hoge(<span class="synIdentifier">$a</span>);
+        <span class="synIdentifier">&amp;hoge</span>(<span class="synIdentifier">$a</span>);
     }
     <span class="synStatement">return</span> <span class="synIdentifier">$string</span>;
 }
@@ -187,3 +187,13 @@ sub dummy {
 </pre>
 --- outline
 <<< aa
+
+===
+--- input
+<<< raw
+<strong>hoge</strong>
+>>>
+--- output
+<strong>hoge</strong>
+--- outline
+<<< raw

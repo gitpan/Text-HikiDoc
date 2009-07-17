@@ -1,4 +1,4 @@
-# $Id: 35_lib-Text-HikiDoc-Plugin-texthighlight.t,v 1.2 2006/11/15 04:22:38 6-o Exp $
+# $Id: 35_lib-Text-HikiDoc-Plugin-texthighlight.t,v 1.4 2009/02/26 15:03:58 oneroad Exp $
 use Test::Base;
 use Text::HikiDoc;
 
@@ -86,7 +86,7 @@ sub dummy {
     $a =~ <span class="key3">s</span>/^\s*(.*)\s*$/$<span class="number">1</span>/;
 
     <span class="key1">if</span> ( $a =~ /($PLUGIN_RE)/ ) {
-        &amp;amp;hoge($a);
+        &amp;hoge($a);
     }
     <span class="key1">return</span> $string;
 }
@@ -122,7 +122,7 @@ sub dummy {
     $a =~ <span class="key3">s</span>/^\s*(.*)\s*$/$<span class="number">1</span>/;
 
     <span class="key1">if</span> ( $a =~ /($PLUGIN_RE)/ ) {
-        &amp;amp;hoge($a);
+        &amp;hoge($a);
     }
     <span class="key1">return</span> $string;
 }
@@ -187,3 +187,13 @@ sub dummy {
 </pre>
 --- outline
 <<< aa
+
+===
+--- input
+<<< raw
+<strong>hoge</strong>
+>>>
+--- output
+<strong>hoge</strong>
+--- outline
+<<< raw
