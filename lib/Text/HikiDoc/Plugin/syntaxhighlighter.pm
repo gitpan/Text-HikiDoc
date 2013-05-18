@@ -1,10 +1,8 @@
-package Text::HikiDoc::Plugin::texthighlight;
+package Text::HikiDoc::Plugin::syntaxhighlighter;
 
 use strict;
 use warnings;
 no warnings 'redefine';
-
-use Text::Highlight;
 
 *Text::HikiDoc::_parse_pre = sub {
     my $self = shift;
@@ -32,25 +30,8 @@ use Text::Highlight;
     };
     $string =~ s|^$MULTI_PRE_OPEN_RE[ \t]*[rR][aA][wW]$(.*?)^$MULTI_PRE_CLOSE_RE$|"\n".$c->($1)."\n\n"|esgm;
 
-    # texthighlight
-    $c = sub {
-        my $str = shift;
-        my $type = shift || 'Perl';
-        # CPP, CSS, HTML, Java, PHP, Perl, SQL
-        return if $str eq '';
-
-        $type = uc $type;
-        $type = 'Java' if ( $type eq 'JAVA' );
-        $type = 'Perl' if ( $type eq 'PERL' );
-
-        $str =~ s/&lt;/</g;
-        $str =~ s/&gt;/>/g;
-        $str =~ s/&amp;/&/g;
-
-        my $th = Text::Highlight->new(wrapper => "%s");
-        return $th->highlight($type,$str);
-    };
-    $string =~ s|^$MULTI_PRE_OPEN_RE[ \t]*(\w*)$(.*?)^$MULTI_PRE_CLOSE_RE$|"\n".$self->_store_block('<pre class="texthighlight">'.$self->_restore_pre($c->($2,$1)).'</pre>')."\n\n"|esgm;
+    # syntaxhighlight
+    $string =~ s|^$MULTI_PRE_OPEN_RE[ \t]*(\w*)$(.*?)^$MULTI_PRE_CLOSE_RE$|"\n".$self->_store_block('<pre class="brush: '.lc($1).'">'.$2.'</pre>')."\n\n"|esgm;
 
     $c = sub {
         my $string = shift;
