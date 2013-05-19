@@ -45,6 +45,7 @@
       },
       "test" : {
          "requires" : {
+            "Test::Base" : "0",
             "Test::More" : "0.98"
          }
       }
@@ -52,7 +53,7 @@
    "provides" : {
       "Text::HikiDoc" : {
          "file" : "lib/Text/HikiDoc.pm",
-         "version" : "1.020"
+         "version" : "1.021"
       },
       "Text::HikiDoc::Plugin" : {
          "file" : "lib/Text/HikiDoc/Plugin.pm"
@@ -96,7 +97,7 @@
          "web" : "https://github.com/higemaru/p5-text-hikidoc"
       }
    },
-   "version" : "1.020",
+   "version" : "1.021",
    "x_contributors" : [
       "KAWABATA Kazumichi <kawabata@cpan.org>"
    ]

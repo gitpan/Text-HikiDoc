@@ -3,6 +3,7 @@ abstract: "Pure Perl implementation of 'HikiDoc' which is a text-to-HTML convers
 author:
   - "The original 'HikiDoc' was written by Kazuhiko <kazuhiko@fdiary.net>"
 build_requires:
+  Test::Base: 0
   Test::More: 0.98
 configure_requires:
   CPAN::Meta: 0
@@ -27,7 +28,7 @@ no_index:
 provides:
   Text::HikiDoc:
     file: lib/Text/HikiDoc.pm
-    version: 1.020
+    version: 1.021
   Text::HikiDoc::Plugin:
     file: lib/Text/HikiDoc/Plugin.pm
   Text::HikiDoc::Plugin::aa:
@@ -54,6 +55,6 @@ resources:
   bugtracker: https://github.com/higemaru/p5-text-hikidoc/issues
   homepage: https://github.com/higemaru/p5-text-hikidoc
   repository: git://github.com/higemaru/p5-text-hikidoc.git
-version: 1.020
+version: 1.021
 x_contributors:
   - 'KAWABATA Kazumichi <kawabata@cpan.org>'
